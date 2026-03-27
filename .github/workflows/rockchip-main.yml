@@ -9,7 +9,7 @@ jobs:
             - name: Setup Ubuntu
               run: |
                 sudo apt update
-                sudo apt install -y python3 python3-pip python3-ply python3-pyelftools libpython3-dev swig
+                sudo apt install -y gcc-14 g++-14 subversion build-essential gettext 2to3 python3-pyelftools python3-distutils-extra
             - name: Maximize build space
               uses: AdityaGarg8/remove-unwanted-software@master
               with:
