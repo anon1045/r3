@@ -10,17 +10,6 @@ jobs:
               run: |
                 sudo apt update
                 sudo apt install -y ncurses-bin gcc-14 g++-14 subversion build-essential gettext 2to3 python3-pyelftools python3-distutils-extra
-            - name: Maximize build space
-              uses: AdityaGarg8/remove-unwanted-software@master
-              with:
-                remove-dotnet: 'true'
-                remove-android: 'true'
-                remove-haskell: 'true'
-                remove-codeql: 'true'
-                remove-docker-images: 'true'
-                remove-large-packages: 'true'
-                remove-cached-tools: 'true'
-                remove-swapfile: 'true'
             - name: checkout
               uses: actions/checkout@v4
             - name: Build
